@@ -33778,7 +33778,6 @@ footer .footer__content .footer__menus .footer__menu ul.socials__list li a {
 
 footer .footer__content .footer__copyright {
     margin-top: 50px;
-    border-top: 1px solid rgba(255, 255, 255, .4);
     padding-top: 50px;
     display: inline-flex;
     justify-content: space-between;
@@ -33997,7 +33996,7 @@ footer .footer__content .footer__copyright a:hover {
     font-size: 24px;
     color: #33475b;
     margin-bottom: 15px;
-    text-align: center
+    text-align: left;
 }
 
 #post__content .section__form form .form__text,
@@ -35010,15 +35009,15 @@ footer .footer__content .footer__copyright a:hover {
     font-size: 24px;
     color: #33475b;
     margin-bottom: 15px;
-    text-align: center
+    margin-left: 26px;
 }
 
 .modal__form form .form__text,
 .modal__form .form__HS .form__text {
     font-size: 14px;
     line-height: 1.5;
-    margin-bottom: 35px;
-    text-align: center
+    margin-bottom: 15px;
+    margin-left: 26px;
 }
 
 .modal__form form .form__image {
