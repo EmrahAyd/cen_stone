@@ -33661,7 +33661,6 @@ header .header__phone .phone__link:hover .link__icon i {
     font-size: 18px;
     color: #33475b;
     padding: 15px;
-    padding-left: 66px;
     background: #fff;
     border-radius: 0;
     border: 0;
@@ -35062,7 +35061,6 @@ footer .footer__content .footer__copyright a:hover {
     font-size: 18px;
     color: #33475b;
     padding: 15px;
-    padding-left: 66px;
     background: 0 0;
     border-radius: 0;
     border: 0;
@@ -40209,12 +40207,12 @@ te-post-service-big #trust .wac .logotypes__list {
 }
 
 .home-time-list li:first-of-type::after {
-    content: 'OR';
+    content: '';
     display: flex;
     align-items: center;
     justify-content: center;
     background: #F5F8FA;
-    border: 1px solid rgba(51, 71, 91, .12);
+    border-left: 1px solid rgba(51, 71, 91, .12);
     border-radius: 32px;
     width: 48px;
     height: 48px;
@@ -42649,12 +42647,11 @@ img {
         display: none
     }
 
-    .content__form form .form__input input,
+    /* .content__form form .form__input input,
     .content__form form .form__input textarea,
     .modal__form form .form__input input,
     .modal__form form .form__input textarea {
-        padding-left: 46px
-    }
+    } */
 
     .content__form form .form__input .input__icon,
     .modal__form form .form__input .input__icon {
