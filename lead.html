@@ -13,12 +13,14 @@
 
 
     <title>CEN STONE</title>
-    <link rel="stylesheet" href="./files/e8eb67eb3bd67b0975d3e59452d11594.css" media="all" data-minify="1">
+    <link rel="stylesheet" href="./files/e8eb67eb3bd67b0975d3e59452d11594.css?v=0" media="all" data-minify="1">
     <meta property="og:locale" content="en_US">
     <meta property="og:type" content="website">
     <meta property="og:title" content="countertop">
 
     <style type="text/css">
+        body{
+margin: 0px;        }
         img.wp-smiley,
         img.emoji {
             display: inline !important;
@@ -30,6 +32,9 @@
             vertical-align: -0.1em !important;
             background: none !important;
             padding: 0 !important;
+
+
+
         }
     </style>
 
@@ -43,6 +48,9 @@
 
 
     <style type="text/css" id="wp-custom-css">
+        html,body{
+    overflow-x: hidden;
+}
         .sideFormHS {
             position: sticky;
             top: 110px;
@@ -120,8 +128,6 @@
 </head>
 
 <body class="home page-template page-template-home__page page-template-home__page-php page page-id-3905">
-    <div class="mobile__menu__overlay"></div>
-    <div class="mobile__menu--fixed"></div>
     <div class="preheader">
         <div class="container header__container">
             <div class="preheader__row">
@@ -147,8 +153,8 @@
             </div>
         </div>
     </div>
-    <header >
-        <div class="container header__container" style="display: flex; justify-content: space-between !important;">
+    <header class="header" id="myHeader">
+        <div class="container header__container" style=" justify-content: space-between !important;">
             <div class="header__logo">
                 <a class="logo__link">
                     <img width="" style="text-align: left !important;" height="45" src="https://censtone.ca/wp-content/uploads/2020/06/logo.png" alt=""
@@ -172,13 +178,40 @@
         </div>
     </header>
 
+<style>
+    .header {
+  padding: 10px 16px;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
+.sticky + .content {
+  padding-top: 102px;
+}
+</style>
+<script>
+    window.onscroll = function() {myFunction()};
 
+// Get the header
+var header = document.getElementById("myHeader");
+
+// Get the offset position of the navbar
+var sticky = header.offsetTop;
+
+// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+</script>
     <section id="home__main">
         <div class="layer">
-            <img width="199" height="202" src="./files/layer.svg" alt=""
-                data-lazy-src="https://easyrenovation.ca/wp-content/uploads/2020/10/layer.svg" data-ll-status="loaded"
-                class="entered lazyloaded"><noscript><img width="199" height="202"
-                    src="https://easyrenovation.ca/wp-content/uploads/2020/10/layer.svg" alt=""></noscript>
+            <img width="199" height="202" src="./files/layer.svg" alt="">
         </div>
         <div class="container">
             <div class="row">
@@ -261,10 +294,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="owl-nav "><button type="button" role="presentation" class="owl-prev"><span
+                <!-- <div class="owl-nav "><button type="button" role="presentation" class="owl-prev"><span
                             aria-label="Previous">‹</span></button><button type="button" role="presentation"
                         class="owl-next"><span aria-label="Next">›</span></button></div>
-                <div class="owl-dots"></div>
+                <div class="owl-dots"></div> -->
             </div>
         </div>
     </section>
@@ -613,10 +646,10 @@
 
                 </div>
             </div>
-            <div class="owl-nav disabled"><button type="button" role="presentation" class="owl-prev"><span
-                        aria-label="Previous">‹</span></button><button type="button" role="presentation"
-                    class="owl-next"><span aria-label="Next">›</span></button></div>
-            <div class="owl-dots disabled"></div>
+            <!-- <div class="owl-nav disabled"><button type="button" role="presentation" class="owl-prev"><span
+                        aria-label="Previous"></span></button><button type="button" role="presentation"
+                    class="owl-next"><span aria-label="Next"></span></button></div>
+            <div class="owl-dots disabled"></div> -->
         </div>
     </section>
 
@@ -664,23 +697,6 @@
                     </div>
                 </li>
 
-                <li class="col-md-4">
-                    <div class="item__block">
-                        <div class="block__icon">
-                            <svg width="100" height="100" viewBox="0 0 100 100" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M48.7468 35.2238V32.4086C48.7468 31.993 49.084 31.6562 49.5 31.6562C49.916 31.6562 50.2533 31.993 50.2533 32.4086V35.2238C54.9673 35.4679 59.0778 37.9903 61.5025 41.7096L74.7402 34.0758L50.2533 19.9548V21.0713C50.2533 21.4868 49.916 21.8237 49.5 21.8237C49.084 21.8237 48.7468 21.4868 48.7468 21.0713V19.9548L24.2598 34.0758L37.4975 41.7097C39.9222 37.9903 44.0327 35.468 48.7468 35.2238ZM36.7431 43.0122L23.5066 35.379V63.621L23.8964 63.3963C24.2567 63.1884 24.7173 63.3118 24.9254 63.6716C25.1333 64.0315 25.01 64.4917 24.6497 64.6994L24.2598 64.9242L24.6497 65.149L28.2969 67.2523L31.3363 69.005L34.9836 71.1083L38.023 72.8611L41.6703 74.9644L44.7096 76.7171L48.3569 78.8204L48.7468 79.0452V63.7761C44.0328 63.5319 39.9222 61.0096 37.4976 57.2903L34.9836 58.7401C34.6233 58.9478 34.1626 58.8245 33.9546 58.4646C33.7466 58.1048 33.87 57.6447 34.2303 57.4369L36.7431 55.9878C35.7486 54.0407 35.1877 51.8358 35.1877 49.5C35.1877 47.1642 35.7485 44.9593 36.7431 43.0122ZM50.2533 63.7761V79.0452L50.6431 78.8204L50.6441 78.8198L54.2904 76.7171L57.3298 74.9644L60.9765 72.8614L60.977 72.8611L64.0164 71.1083L67.6637 69.005L70.7031 67.2523L74.3504 65.149L74.7402 64.9242L74.3504 64.6994C73.9901 64.4917 73.8667 64.0315 74.0746 63.6716C74.2827 63.3118 74.7434 63.1884 75.1037 63.3963L75.4934 63.621V35.379L62.257 43.0122C63.2515 44.9592 63.8123 47.1642 63.8123 49.5C63.8123 51.8358 63.2514 54.0408 62.2569 55.9878L64.7697 57.4369C65.13 57.6447 65.2534 58.1048 65.0454 58.4646C64.8374 58.8245 64.3767 58.9478 64.0164 58.7401L61.5025 57.2903C59.0778 61.0096 54.9673 63.532 50.2533 63.7761ZM22.3766 65.5758L22 64.9242V34.0758L22.3766 33.4242V33.4242L49.1233 18H49.1234H49.8766H49.8767L76.6234 33.4242L77 34.0758V64.9242L76.6234 65.5758L75.1037 66.4522L75.1011 66.4537L71.4564 68.5555L68.417 70.3082L68.4148 70.3095L64.7697 72.4115L61.7303 74.1643L58.083 76.2676L55.0436 78.0203L55.0432 78.0206L51.3963 80.1236L49.8767 81H49.1234L47.6037 80.1236L43.9564 78.0203L40.917 76.2676L37.2706 74.1647L37.2697 74.1643L34.2303 72.4115L34.2285 72.4104L30.5849 70.3093L30.583 70.3082L27.5436 68.5555L23.8986 66.4534L23.8964 66.4522L22.3766 65.5758ZM31.3363 60.8434C31.6966 60.6356 31.82 60.1755 31.612 59.8156C31.404 59.4557 30.9433 59.3324 30.583 59.5402L27.5436 61.2929C27.1833 61.5007 27.0599 61.9608 27.2679 62.3207C27.4759 62.6806 27.9366 62.8039 28.2969 62.5961L31.3363 60.8434ZM68.417 59.5402C68.0567 59.3324 67.596 59.4557 67.388 59.8156C67.18 60.1755 67.3034 60.6356 67.6637 60.8434L70.7031 62.5961C71.0634 62.8039 71.5241 62.6806 71.7321 62.3207C71.9401 61.9608 71.8167 61.5007 71.4564 61.2929L68.417 59.5402ZM49.5 24.3203C49.916 24.3203 50.2533 24.6571 50.2533 25.0727V28.4072C50.2533 28.8227 49.916 29.1596 49.5 29.1596C49.084 29.1596 48.7468 28.8227 48.7468 28.4072V25.0727C48.7468 24.6571 49.084 24.3203 49.5 24.3203ZM36.6943 49.5C36.6943 42.4358 42.4276 36.7092 49.5 36.7092C56.5724 36.7092 62.3058 42.4358 62.3058 49.5C62.3058 56.5641 56.5724 62.2908 49.5 62.2908C42.4276 62.2908 36.6943 56.5641 36.6943 49.5Z"
-                                    fill="#33475B"></path>
-                            </svg>
-                        </div>
-                        <div class="block__title">3D Rendering</div>
-                        <div class="block__text">
-                            <p>Censone designers will use 3D modeling and rendering to create the perfect
-                                space for you.</p>
-                        </div>
-                    </div>
-                </li>
 
                 <li class="col-md-4">
                     <div class="item__block">
@@ -695,7 +711,7 @@
                         <div class="block__title">Quality Materials</div>
                         <div class="block__text">
                             <p>We will use top-quality materials from different vendors. For all your needs
-				 we’ve got you covered.</p>
+				                we’ve got you covered.</p>
                         </div>
                     </div>
                 </li>
@@ -754,12 +770,9 @@
                         data-wpel-link="internal">
                         <span class="block__image">
                             <picture>
-                                <source type="image/webp"
-                                    data-lazy-srcset="/files/marble.svg"
-                                    srcset="data:image/svg+xml,%3Csvg%20xmlns=&#39;http://www.w3.org/2000/svg&#39;%20viewBox=&#39;0%200%20430%20407&#39;%3E%3C/svg%3E">
                                 <img width="430" height="407"
-                                    src="data:image/svg+xml,%3Csvg%20xmlns=&#39;http://www.w3.org/2000/svg&#39;%20viewBox=&#39;0%200%20430%20407&#39;%3E%3C/svg%3E"
-                                    alt="" data-lazy-src="/files/marble.svg">
+                                    src="/files/marble.svg"
+                                    alt="">
                             </picture>
                             <noscript>
                                 <picture>
@@ -782,13 +795,9 @@
                         data-wpel-link="internal">
                         <span class="block__image">
                             <picture>
-                                <source type="image/webp"
-                                    data-lazy-srcset="/files/tile.svg"
-                                    srcset="data:image/svg+xml,%3Csvg%20xmlns=&#39;http://www.w3.org/2000/svg&#39;%20viewBox=&#39;0%200%20430%20407&#39;%3E%3C/svg%3E">
                                 <img width="430" height="407"
-                                    src="data:image/svg+xml,%3Csvg%20xmlns=&#39;http://www.w3.org/2000/svg&#39;%20viewBox=&#39;0%200%20430%20407&#39;%3E%3C/svg%3E"
-                                    alt=""
-                                    data-lazy-src="/files/tile.svg">
+                                    src="/files/tile.svg"
+                                    alt="">
                             </picture>
                             <noscript>
                                 <picture>
@@ -814,12 +823,8 @@
                         data-wpel-link="internal">
                         <span class="block__image">
                             <picture>
-                                <source type="image/webp"
-                                    data-lazy-srcset="/files/countertop.svg"
-                                    srcset="data:image/svg+xml,%3Csvg%20xmlns=&#39;http://www.w3.org/2000/svg&#39;%20viewBox=&#39;0%200%20430%20407&#39;%3E%3C/svg%3E">
                                 <img width="430" height="407"
-                                    src="data:image/svg+xml,%3Csvg%20xmlns=&#39;http://www.w3.org/2000/svg&#39;%20viewBox=&#39;0%200%20430%20407&#39;%3E%3C/svg%3E"
-                                    alt="" data-lazy-src="/files/countertop.svg">
+                                    src="/files/countertop.svg">
                             </picture>
                             <noscript>
                                 <picture>
@@ -846,8 +851,8 @@
     <section id="float__gallery">
         <div class="container-fluid">
 
-            <h3 class="title"> Gallery
-                <span style="text-transform: lowercase;">of</span>  Past Projects</h3>
+            <h3 class="title"> Gallery <br>
+                <span style="text-transform: lowercase;">of</span> Past Projects</h3>
 
             <div class="subtext subtext--lined">Your countertop renovationing Starts From a Design</div>
 
@@ -1060,10 +1065,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="owl-nav disabled"><button type="button" role="presentation" class="owl-prev"><span
+                <!-- <div class="owl-nav disabled"><button type="button" role="presentation" class="owl-prev"><span
                             aria-label="Previous">‹</span></button><button type="button" role="presentation"
                         class="owl-next"><span aria-label="Next">›</span></button></div>
-                <div class="owl-dots disabled"></div>
+                <div class="owl-dots disabled"></div> -->
             </div>
             <div class="images__slider owl-carousel left owl-loaded">
 
@@ -1249,11 +1254,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="owl-nav "><button type="button" role="presentation" class="owl-prev"><span
-                            aria-label="Previous">‹</span></button><button type="button" role="presentation"
-                        class="owl-next"><span aria-label="Next">›</span></button></div>
-                <div class="owl-dots "></div>
             </div>
+
         </div>
     </section>
     <!-- <section id="how__it__works">
@@ -1450,21 +1452,10 @@
         </div>
         <div class="section__bg">
             <picture>
-                <source type="image/webp"
-                    data-lazy-srcset="https://censtone.ca/wp-content/uploads/2022/11/coffee-table-image.jpg"
-                    srcset="data:image/svg+xml,%3Csvg%20xmlns=&#39;http://www.w3.org/2000/svg&#39;%20viewBox=&#39;0%200%20960%20500&#39;%3E%3C/svg%3E">
                 <img width="960" height="500"
-                    src="data:image/svg+xml,%3Csvg%20xmlns=&#39;http://www.w3.org/2000/svg&#39;%20viewBox=&#39;0%200%20960%20500&#39;%3E%3C/svg%3E"
-                    alt="" data-lazy-src="https://censtone.ca/wp-content/uploads/2022/11/coffee-table-image.jpg">
+                    src="https://censtone.ca/wp-content/uploads/2022/11/coffee-table-image.jpg"
+                    alt="">
             </picture>
-            <noscript>
-                <picture>
-                    <source type="image/webp"
-                        srcset="https://censtone.ca/wp-content/uploads/2022/11/coffee-table-image.jpg" />
-                    <img width="960" height="500" src="https://censtone.ca/wp-content/uploads/2022/11/coffee-table-image.jpg"
-                        alt="" />
-                </picture>
-            </noscript>
         </div>
     </section>
     <section id="type1">
@@ -1494,23 +1485,10 @@
                     </ul>
                     <div class="section__image col-md-5">
                         <picture>
-                            <source type="image/webp"
-                                data-lazy-srcset="https://easyrenovation.ca/wp-content/uploads/2020/11/Easy-renovation.png.webp"
-                                srcset="data:image/svg+xml,%3Csvg%20xmlns=&#39;http://www.w3.org/2000/svg&#39;%20viewBox=&#39;0%200%20545%20220&#39;%3E%3C/svg%3E">
                             <img width="545" height="220"
-                                src="data:image/svg+xml,%3Csvg%20xmlns=&#39;http://www.w3.org/2000/svg&#39;%20viewBox=&#39;0%200%20545%20220&#39;%3E%3C/svg%3E"
-                                alt=""
-                                data-lazy-src="https://easyrenovation.ca/wp-content/uploads/2020/11/Easy-renovation.png">
+                                src="https://easyrenovation.ca/wp-content/uploads/2020/11/Easy-renovation.png"
+                                alt="">
                         </picture>
-                        <noscript>
-                            <picture>
-                                <source type="image/webp"
-                                    srcset="https://easyrenovation.ca/wp-content/uploads/2020/11/Easy-renovation.png.webp" />
-                                <img width="545" height="220"
-                                    src="https://easyrenovation.ca/wp-content/uploads/2020/11/Easy-renovation.png"
-                                    alt="" />
-                            </picture>
-                        </noscript>
                     </div>
                 </div>
             </div>
@@ -1608,45 +1586,8 @@
     <section id="locations">
         <div class="container">
             <h4 class="title">Our Service Areas</h4>
-            <div class="subtext subtext--lined">…serving the Greater Toronto Horseshoe Area for all your countertop,
-                <br>basement, and Countertop Renovation needs.
+            <div class="subtext subtext--lined"> Serving GREATER TORONTO AREA from Kingston to Windsor.
             </div>
-            <ul class="locations__list">
-                <li class="list__item">
-
-
-                    <a href="https://emrahaydin.dev" data-wpel-link="internal">Ajax</a>
-                </li>
-                <li class="list__item">
-
-
-                    <a href="https://emrahaydin.dev" data-wpel-link="internal">Aurora</a>
-                </li>
-                <li class="list__item">
-
-
-                    <a href="https://emrahaydin.dev" data-wpel-link="internal">Bolton</a>
-                </li>
-                <li class="list__item">
-
-
-                    <a href="https://emrahaydin.dev"
-                        data-wpel-link="internal">Bradford</a>
-                </li>
-                <li class="list__item">
-
-
-                    <a href="https://emrahaydin.dev"
-                        data-wpel-link="internal">Brampton</a>
-                </li>
-                <li class="list__item">
-
-
-                    <a href="https://emrahaydin.dev"
-                        data-wpel-link="internal">Burlington</a>
-                </li>
-
-            </ul>
         </div>
 
         <!-- <div class="container">
@@ -1730,11 +1671,7 @@
                             <div class="item__icon">
                                 <img width="46" height="31"
                                     src="data:image/svg+xml,%3Csvg%20xmlns=&#39;http://www.w3.org/2000/svg&#39;%20viewBox=&#39;0%200%2046%2031&#39;%3E%3C/svg%3E"
-                                    alt=""
-                                    data-lazy-src="https://easyrenovation.ca/wp-content/uploads/2020/10/email__icon.svg"><noscript><img
-                                        width="46" height="31"
-                                        src="https://easyrenovation.ca/wp-content/uploads/2020/10/email__icon.svg"
-                                        alt=""></noscript>
+                                    alt="">
                             </div>
                             <div class="item__info">
                                 <div class="info__label">Email Us</div>
@@ -1747,11 +1684,7 @@
                             <div class="item__icon">
                                 <img width="38" height="39"
                                     src="data:image/svg+xml,%3Csvg%20xmlns=&#39;http://www.w3.org/2000/svg&#39;%20viewBox=&#39;0%200%2038%2039&#39;%3E%3C/svg%3E"
-                                    alt=""
-                                    data-lazy-src="https://easyrenovation.ca/wp-content/uploads/2020/10/phone__icon.svg"><noscript><img
-                                        width="38" height="39"
-                                        src="https://easyrenovation.ca/wp-content/uploads/2020/10/phone__icon.svg"
-                                        alt=""></noscript>
+                                    alt="">
                             </div>
                             <div class="item__info">
                                 <div class="info__label">Call Us</div>
@@ -1809,12 +1742,8 @@
                         <div class="footer__logo">
                             <a href="https://censtone.ca/" class="logo__link" data-wpel-link="internal">
                                 <img width="153" height="45"
-                                    src="data:image/svg+xml,%3Csvg%20xmlns=&#39;http://www.w3.org/2000/svg&#39;%20viewBox=&#39;0%200%20153%2045&#39;%3E%3C/svg%3E"
-                                    alt="" class="link__image"
-                                    data-lazy-src="https://censtone.ca/wp-content/uploads/2020/06/logo.png"><noscript><img
-                                        width="153" height="45"
-                                        src="https://censtone.ca/wp-content/uploads/2020/06/logo.png"
-                                        alt="" class="link__image"></noscript>
+                                    src="https://censtone.ca/wp-content/uploads/2020/06/logo.png"
+                                    alt="" class="link__image">
                             </a>
                         </div>
                         <div class="footer__text">
@@ -1978,6 +1907,10 @@
         </div>
     </div>
 <style>
+body{
+    margin: 0px;
+    padding: 0px;
+}
 
 .forma {
   max-width: 300px;
@@ -2059,7 +1992,6 @@ label {
     <script src="./files/jquery.maskedinput.min.js.indir" defer=""></script>
     <script data-minify="1" src="./files/owl.carousel.js.indir" defer=""></script>
     <script data-minify="1" src="./files/script.js.indir" defer=""></script>
-    <!-- Meta Pixel Event Code -->
 
     <script data-minify="1" type="text/javascript" src="./files/index.js.indir" id="swv-js" defer=""></script>
 
@@ -2090,7 +2022,6 @@ label {
             }
         }, !1)</script>
     <script data-no-minify="1" async="" src="./files/lazyload.min.js.indir"></script>
-    <!-- <script type="rocketlazyloadscript" src="https://www.google.com/recaptcha/api.js?render=6LfbU90ZAAAAAFWceiAGTQm4YD8sLVso3s2D7xsy"></script> -->
     <div class="fixed__area">
         <button class="button button--default button--orange" data-toggle="modal" data-target="#formModal">Get a Free
             Estimate</button>
@@ -2138,7 +2069,10 @@ document.querySelector("#closre").addEventListener("click", function(){
 
     <style media="screen">
 
-
+body{
+    margin: 0px;
+    padding: 0px;
+}
 .popupe{
     z-index: 9999;
     border: #a75395 1px solid;
