@@ -31784,9 +31784,9 @@ section {
     margin-right: auto
 }
 
-.subtext.subtext--lined.subtext__left:after {
+/* .subtext.subtext--lined.subtext__left:after {
     margin-left: 0
-}
+} */
 
 .subtext.subtext__left {
     text-align: left

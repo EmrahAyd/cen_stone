@@ -99,7 +99,23 @@
 
     <script src="./files/jquery-3.3.1.min.js(1).indir" defer=""></script>
 
-
+<!-- Meta Pixel Code -->
+<script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '560937338937698');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=560937338937698&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
 
 </head>
 
@@ -461,18 +477,17 @@
                 <div class="elementor-element elementor-element-6a828bc elementor-widget elementor-widget-image"
                     data-id="6a828bc" data-element_type="widget"
                     data-widget_type="image.default">
-                    <div class="elementor-widget-container">
+                    <div class="elementor-widget-container" style="text-align: center;">
                         <img width="167"
                             src="https://censtone.ca/gr.png">
                     </div>
                 </div>
             </div>
         </div>
-            <div class="subtext subtext__left subtext--lined" style="margin-top: 10px;">Here’s what to expect when you
+            <div class="subtext subtext__left subtext--lined" style="margin-top: 10px;text-align: center;">Here’s what to expect when you
                 hire us as your place contractor.</div>
-        </div>
+            </div>
         <div class="reviews__slider owl-carousel owl-loaded" id="reviewsSlider">
-
             <div class="owl-stage-outer">
                 <div class="owl-stage"
                     style="transition: all 0.25s ease 0s; width: 13321px; transform: translate3d(-3092px, 0px, 0px);">
@@ -607,10 +622,10 @@
 
     <section id="why__us">
         <div class="container">
-            <h2 class="title">Our Approach <span style="text-transform: lowercase;">To</span> Countertop<br>
-                Renovation <span style="text-transform: lowercase;">Is</span> Different</h2>
-            <div class="subtext subtext--lined">At CENSTONE, we aim to deliver an all-inclusive renovation service and strive to ensure that
-                <br> each renovation project stays on time and within budget.
+            <h2 class="title">Get Factory Direct<br> Prices<span style="text-transform: lowercase;"> At</span><br><span style="color: #F09E21;"> CENSTONE</span>
+                </h2>
+            <div class="subtext subtext--lined">We aim to deliver an all-inclusive renovation service and strive to ensure that <br>
+                each renovation project stays on time and within budget.
             </div>
             <ul class="info__list row">
                 <li class="col-md-4">
@@ -756,7 +771,7 @@
                             </noscript>
                         </span>
                         <span class="block__info">
-                            <span class="info__title">countertop Countertops</span>
+                            <span class="info__title">Countertops</span>
                             <span class="info__text">It's not just a stone. It's a style.</span>
                             <span class="info__link">Learn more</span>
                         </span>
@@ -816,7 +831,7 @@
                             </noscript>
                         </span>
                         <span class="block__info">
-                            <span class="info__title">countertop Vanity Tops</span>
+                            <span class="info__title">Vanity Tops</span>
                             <span class="info__text">Vanity that make your place come alive! </span>
                             <span class="info__link">Learn more</span>
                         </span>
@@ -1238,10 +1253,6 @@
                             aria-label="Previous">‹</span></button><button type="button" role="presentation"
                         class="owl-next"><span aria-label="Next">›</span></button></div>
                 <div class="owl-dots "></div>
-            </div>
-            <div class="gallery__more">
-                <a href="https://censtone.ca/cen-stone-portfolio/" class="button button--default button--orange"
-                    data-wpel-link="internal">View More Projects</a>
             </div>
         </div>
     </section>
@@ -2098,14 +2109,7 @@ label {
     </div>
     <!--Script-->
     <script type="text/javascript">
-        let amew =  setTimeout(
-        function open(event){
-            document.querySelector(".popupe").style.display = "block";
-            document.getElementById("popupe").focus();
 
-        },
-        3000
-    );
 window.addEventListener("load", function(){
     console.log("loaded")
     setTimeout(
