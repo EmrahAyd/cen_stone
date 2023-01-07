@@ -36599,7 +36599,7 @@ footer .footer__content .footer__copyright a:hover {
     }
 
     #home__main .section__right img {
-        height: 250px;
+        height: 350px;
         object-position: top
     }
 
@@ -40209,12 +40209,11 @@ te-post-service-big #trust .wac .logotypes__list {
 }
 
 .home-time-list li:first-of-type::after {
-    content: 'OR';
+    content: '';
     display: flex;
     align-items: center;
     justify-content: center;
     background: #F5F8FA;
-    border: 1px solid rgba(51, 71, 91, .12);
     border-radius: 32px;
     width: 48px;
     height: 48px;
@@ -42653,7 +42652,7 @@ img {
     .content__form form .form__input textarea,
     .modal__form form .form__input input,
     .modal__form form .form__input textarea {
-        padding-left: 46px
+        padding-left: 5px
     }
 
     .content__form form .form__input .input__icon,
