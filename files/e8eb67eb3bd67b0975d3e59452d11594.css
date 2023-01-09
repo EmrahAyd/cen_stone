@@ -32664,7 +32664,7 @@ header .header__phone .phone__link:hover .link__icon i {
     display: block
 }
 
-#trust .section__content .star__score .score__block .score__value {
+#trust .section__content .star__score .score__block .score__vale{
     font-weight: 800;
     font-size: 54px;
     color: #333
