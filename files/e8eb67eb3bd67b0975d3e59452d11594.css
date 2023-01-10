@@ -33661,7 +33661,7 @@ header .header__phone .phone__link:hover .link__icon i {
     font-size: 18px;
     color: #33475b;
     padding: 15px;
-    padding-left: 66px;
+    padding-left: 10px;
     background: #fff;
     border-radius: 0;
     border: 0;
@@ -35062,7 +35062,7 @@ footer .footer__content .footer__copyright a:hover {
     font-size: 18px;
     color: #33475b;
     padding: 15px;
-    padding-left: 66px;
+    padding-left: 15px;
     background: 0 0;
     border-radius: 0;
     border: 0;
